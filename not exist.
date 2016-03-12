@@ -1,0 +1,53 @@
+[33mcommit 35cfe78c90e46db2deb80432abc198fde934df64[m
+Author: nariks <happycow@gmail.com>
+Date:   Thu Mar 10 07:27:47 2016 +1100
+
+    Added format_date to listable module
+
+[33mcommit d29fcf9ade2b8219e12450f777c3878db239efaa[m
+Author: nariks <happycow@gmail.com>
+Date:   Wed Mar 9 21:34:24 2016 +1100
+
+    Initial Repo + populated listable module
+
+[33mcommit 68aab52057d8e55093ba1d8bb6bffb6e101d7392[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Thu Jan 14 16:33:03 2016 -0800
+
+    Updated README to clarify feature requirements
+
+[33mcommit 44c0ac9bbf25cfcb0fb2804df173024272b22079[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Wed Jan 13 13:15:43 2016 -0800
+
+    Change filter method requirement
+
+[33mcommit ff315acad10f611b79aaedfec65b11aef55a6378[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Wed Jan 13 11:52:22 2016 -0800
+
+    Add clarification about filter method
+
+[33mcommit ee74dea2ba39e201720aca9c29380f920a268600[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 16:32:37 2016 -0800
+
+    Add filter by item type demo to starter code
+
+[33mcommit 154160cf3b7ff1a29f5ef8e987a219852cac0f12[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 11:09:40 2016 -0800
+
+    Add links for gem sources
+
+[33mcommit 6c365dc917cd32a5e8c520160ec58198cc8cb6d1[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 11:06:54 2016 -0800
+
+    Add rubric link
+
+[33mcommit ad33c7f02fec47e51c72da5cde3f8032f7b8a111[m
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 10:58:34 2016 -0800
+
+    Initial commit

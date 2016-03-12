@@ -11,18 +11,18 @@ module Listable
     else
       date = date1.strftime("%D") + " -- " + date2.strftime("%D")
     end
-    return date
   end
 
+  def format_priority(priority)
+    if priority == "high"
+      value = " ⇧ ".colorize(:red)
+    elsif priority == "medium"
+      value = " ⇨".colorize(:yellow)
+    elsif priority == "low"
+      value = " ⇩".colorize(:green)
+    else
+      value = ""
+    end
+  end
 
-  #   date1 ? date1.strftime("%D") : "No due date"
-  # end
-
-  # def format_date
-  #   dates = @start_date.strftime("%D") if @start_date
-  #   dates << " -- " + @end_date.strftime("%D") if @end_date
-  #   dates = "N/A" if !dates
-  #   return dates
-  # end
-  
 end
