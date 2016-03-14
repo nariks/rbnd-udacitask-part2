@@ -16,11 +16,8 @@ class UdaciList
     raise InvalidItemTypeError, item_errmsg if !["todo", "event", "link"].include? type
     raise InvalidPriorityValueError, priority_errmsg if !["high", "medium", "low", nil].include? options[:priority]
 
-    class_name = Object.const_get(type.capitalize + 'Item')
-    @items.push class_name.new(description, options)
-    # @items.push TodoItem.new(description, options) if type == "todo"
-    # @items.push EventItem.new(description, options) if type == "event"
-    # @items.push LinkItem.new(description, options) if type == "link"
+    class_name = Object.const_get(type.capitalize + 'Item')             #creates relevant class name based on type param
+    @items.push class_name.new(description, options)                    #replaces the if loops logic
   end
 
   def delete(index)
@@ -33,7 +30,7 @@ class UdaciList
 
   def all
     header :title => @title, :width => 70, :align => 'center', :rule => true,
-           :color => 'green', :bold => true, :timestamp => false
+           :color => 'green', :bold => true, :timestamp => true
     @items.each_with_index do |item, position|
       item.details(position + 1)
     end
@@ -42,9 +39,17 @@ class UdaciList
     
 
   def filter(type)
+
+    header :title => @title + ' filtered by ' + type, :width => 70, :align => 'center', :rule => true,
+           :color => 'green', :bold => true, :timestamp => true
+            
+
     # items_by_type = []
-    # @@list_items.each do |item|
-    #   if item.type == 
+    @items.each_with_index do |item, index|
+      if item.class.to_s.chomp('Item') == type.capitalize
+        item.details(index + 1)
+      end
+    end
   end
 
 

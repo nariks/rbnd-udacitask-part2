@@ -16,8 +16,9 @@ class EventItem
     table :border => false do
       row :color => 'magenta' do
         column id, :width => 5, :align => 'center'
-        column format_description(@description), :width => 25
-        column date_txt + format_date(@start_date, @end_date), :width => 40
+        column @description, :width => 25
+        column date_txt, :width => 15
+        column format_date(@start_date, @end_date), :width => 40
       end
     end
      

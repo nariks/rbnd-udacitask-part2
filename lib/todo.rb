@@ -13,12 +13,12 @@ class TodoItem
     table :border => false do
       row :color => 'cyan' do
         column id, :width => 5, :align => 'center'
-        column format_description(@description), :width => 25
-        column 'due: ' + format_date(@due) + format_priority(@priority), :width => 40 
+        column @description, :width => 25
+        column 'due:', :width => 15
+        column format_date(@due) + format_priority(@priority), :width => 40 
         # column , :width => 10
       end
     end
-
-    # format_priority(@priority)
   end
+
 end

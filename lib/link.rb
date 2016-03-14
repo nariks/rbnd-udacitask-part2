@@ -17,8 +17,9 @@ class LinkItem
     table :border => false do
       row :color => 'white' do
         column id, :width => 5, :align => 'center'
-        column format_description(@description), :width => 25
-        column "site name: " + format_name, :width => 40
+        column @description, :width => 25
+        column "site name: ", :width => 15
+        column format_name, :width => 40
       end
     end
      
