@@ -1,4 +1,5 @@
 module Listable
+  include CommandLineReporter
   # format_description method removed as command line reporter takes care of formatting the text
 
 
@@ -24,20 +25,35 @@ module Listable
     end
   end
 
-  # def details(id, type_id)
+  def heading(title)
 
-  #   date_txt = @end_date ? "event dates: " : "event date: "
-  #   color = {:todo => 'cyan', :event => 'magenta', :url => 'white']
+    header :title => title, :width => 86, :align => 'center', :rule => true,
+           :color => 'green', :bold => true, :timestamp => true
 
-  #   table :border => false do
-  #     row :color => color[type] do
-  #       column id, :width => 5, :align => 'center'
-  #       column format_description(@description), :width => 25
-  #       column format_details
+    table :border => true do
+      row :color => :green do
+        column 'No.', :width => 3
+        column 'Description', :width => 22
+        column 'Type', :width => 8
+        column 'Additional Info', :width => 40, :align => 'center'
+      end
+    end
+  end
+
+  def details(id, type_id, options={})
+
+    date_txt = @end_date ? "event dates: " : "event date: "
+    color = {:todo => 'cyan', :event => 'magenta', :url => 'white'}
+
+    table :border => false do
+      row :color => color[type] do
+        column id, :width => 5, :align => 'center'
+        column format_description(@description), :width => 25
+        column format_details
         
-  #     end
-  #   end
-  # end
+      end
+    end
+  end
 
   # def format_details(start_date, end_date)
 
