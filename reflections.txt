@@ -5,9 +5,8 @@
 
 
 2. Describe the 2 features you added to the project.
-  a) Change priority of any todo item - Priority of a particular item can be changed using the change_priority method. If the item cannot
-  	 be found an InvalidItemError exception is raised.
-  b) Deleting multiple items at a same time, which uses a splat operator to accept multiple indices for deletion and deletes them accordingly.
+  a) Change priority of any todo item - Priority of a particular todo item can be changed using the change_priority method. If the item cannot be found an InvalidItemError exception is raised.
+  b) Deleting multiple items at the same time. Method uses a splat operator to accept multiple indices for deletion and deletes them accordingly.
 
 # REFLECTIONS
 # -------------------------------------------------------
