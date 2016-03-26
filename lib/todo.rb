@@ -1,7 +1,8 @@
 class TodoItem
   include Listable
   include CommandLineReporter
-  attr_reader :description, :due, :priority
+  attr_reader :description, :due 
+  attr_accessor :priority
 
   def initialize(description, options={})
     @description = description
@@ -18,10 +19,5 @@ class TodoItem
       end
     end
   end
-
-  def change_priority(priority)
-    @priority = priority
-  end
-
 
 end

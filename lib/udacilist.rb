@@ -63,7 +63,7 @@ class UdaciList
   def change_priority(description, priority)
     @items.each do |item|
       if item.description == description
-        return item.change_priority(priority)
+        return item.priority = priority
       end
     end
     raise UdaciListErrors::InvalidItemError, "'#{description}' - No such item found"
