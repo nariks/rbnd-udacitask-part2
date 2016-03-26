@@ -1,5 +1,6 @@
 module Listable
   include CommandLineReporter
+  
   # format_description method removed as command line reporter takes care of formatting the text
 
 
@@ -25,6 +26,7 @@ module Listable
     end
   end
 
+  #method to create a header for the report 
   def heading(title)
 
     header :title => title, :width => 86, :align => 'center', :rule => true,
@@ -40,31 +42,14 @@ module Listable
     end
   end
 
-  def details(id, type_id, options={})
-
-    date_txt = @end_date ? "event dates: " : "event date: "
-    color = {:todo => 'cyan', :event => 'magenta', :url => 'white'}
-
-    table :border => false do
-      row :color => color[type] do
-        column id, :width => 5, :align => 'center'
-        column format_description(@description), :width => 25
-        column format_details
-        
-      end
-    end
-  end
-
-  # def format_details(start_date, end_date)
-
-  #   if type_id == 'todo'
-  #     'due: ' + format_date(@due) + format_priority(@priority), :width => 40 
-  #   elsif type_id == 'event'
-  #     date_txt + format_date(@start_date, @end_date), :width => 40
-  #   elsif type_id == 'url'
-  #     column "site name: " + format_name, :width => 40
-  #   end
-
-     
+#method for performing some column formatting which is common for all item classes. 
+def column_format(id, description, type, additional1, additional2)
+  column id, :width => 6, :align => 'center'      #displays the item number
+  column description, :width => 25                #displays item description
+  column type                                     #displays item type
+  column additional1, :width => 15                #displays additional description+
+  column additional2, :width => 40                #displays additional info details
+end
+  
 
 end

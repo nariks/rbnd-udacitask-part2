@@ -9,14 +9,12 @@ class TodoItem
     @priority = options[:priority]
   end
   
-  def details(id,options={})
+  def details(id)
+    additional_info = format_date(@due) + format_priority(@priority)
+
     table :border => false do
       row :color => 'cyan' do
-        column id, :width => 6, :align => 'center'
-        column @description, :width => 25
-        column "Todo"
-        column 'due:', :width => 15
-        column format_date(@due) + format_priority(@priority), :width => 40 
+        column_format(id, @description, "Todo", "due", additional_info)         #method to print all item details in a column format
       end
     end
   end

@@ -1,13 +1,21 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+	Gem added command_line_reporter - This gem was used to print the list outputs in a table format and using color coding to print all items of same type in a certain color. format_description method removed as command line reporter takes care of formatting the text
+
+
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Change priority of any todo item - Priority of a particular item can be changed using the change_priority method. If the item cannot
+  	 be found an InvalidItemError exception is raised.
+  b) Deleting multiple items at a same time, which uses a splat operator to accept multiple indices for deletion and deletes them accordingly.
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+	I spent around 5 hours to work on this project
 2. What was the most rewarding challenge you conquered?
+	The most rewarding challenge to learn how the new gem works and implement it in this project.
 3. What two additional features did you build? Why?
+	The two additional features built were deleting multiple items at same time and change the priority of list items. These help the list to be a bit more dynamic rather than static.
 4. Where do you still have room to grow?
+	I think I still room to grow to understand classes and object oriented design in more detail.

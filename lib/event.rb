@@ -9,17 +9,14 @@ class EventItem
     @end_date = Chronic.parse(options[:end_date]) if options[:end_date]
   end
   
-  def details(id, options={})
+  def details(id)
 
     date_txt = @end_date ? "event dates: " : "event date: "
+    additional_info = format_date(@start_date, @end_date)
 
     table :border => false do
       row :color => 'magenta' do
-        column id, :width => 6, :align => 'center'
-        column @description, :width => 25
-        column "Event"
-        column date_txt, :width => 15
-        column format_date(@start_date, @end_date), :width => 40
+        column_format(id, @description, "Event", date_txt, additional_info)     #method to print all item details in a column format
       end
     end
      
